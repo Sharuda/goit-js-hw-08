@@ -2,15 +2,14 @@ import throttle from 'lodash.throttle';
 
 const KEY_LOCALE_STORAGE = 'feedback-form-state';
 const formEl = document.querySelector('.feedback-form');
-const buttonSubmitEl = document.querySelector('[type = "submit"]');
 
 let formData = JSON.parse(localStorage.getItem(KEY_LOCALE_STORAGE)) || {};
 const { email, message } = formEl.elements;
 
 formEl.addEventListener('input', throttle(handleInput, 500));
-buttonSubmitEl.addEventListener('submit', handleClickButtonSubmit);
+formEl.addEventListener('submit', handleClickButtonSubmit);
 
-populateTextInput(); 
+populateTextInput();
 
 function handleInput() {
   formData = { email: email.value, message: message.value };
