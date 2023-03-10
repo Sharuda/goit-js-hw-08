@@ -28,6 +28,7 @@ function handleClickButtonSubmit(event) {
   event.preventDefault();
   console.log({ email: email.value, message: message.value });
 
-  event.target.reset();
   localStorage.removeItem(KEY_LOCALE_STORAGE);
+  event.currentTarget.reset();
+  dataForm = {};
 }
