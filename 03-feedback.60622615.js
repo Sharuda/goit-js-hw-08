@@ -1,2 +1,0 @@
-!function(){var e="feedback-form-state",t=document.querySelector(".feedback-form"),a=document.querySelector('[type = "submit"]'),l=JSON.parse(localStorage.getItem(e))||{},m=t.elements,o=m.email,s=m.message;t.addEventListener("input",(function(){l={email:o.value,message:s.value},localStorage.setItem(e,JSON.stringify(l))})),a.addEventListener("submit",(function(t){t.preventDefault(),console.log({email:o.value,message:s.value}),t.target.reset(),localStorage.removeItem(e)})),l&&(o.value=l.email||"",s.value=l.message||"")}();
-//# sourceMappingURL=03-feedback.60622615.js.map
