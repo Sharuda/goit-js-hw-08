@@ -29,5 +29,5 @@ function handleClickButtonSubmit(event) {
 
   localStorage.removeItem(KEY_LOCALE_STORAGE);
   event.currentTarget.reset();
-  dataForm = {};
+  formData = {};
 }
