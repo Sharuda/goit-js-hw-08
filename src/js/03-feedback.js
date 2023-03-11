@@ -25,6 +25,9 @@ function populateTextInput() {
 
 function handleClickButtonSubmit(event) {
   event.preventDefault();
+  if (email.value === '' || message.value === '') {
+    return alert('Error');
+  }
   console.log({ email: email.value, message: message.value });
 
   localStorage.removeItem(KEY_LOCALE_STORAGE);
